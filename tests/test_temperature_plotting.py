@@ -5,6 +5,11 @@ import os, sys
 import temperature_plotting as tpl
 
 
+def test_compute_mean_bad():
+    calc = tpl.compute_mean([1, 2, 3])
+    assert calc == 5
+
+
 def test_compute_mean():
     ### first test something expected
     calc = tpl.compute_mean(range(1,11))
